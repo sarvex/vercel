@@ -1,5 +1,22 @@
 # vercel
 
+## 30.1.0
+
+### Minor Changes
+
+- New `vc promote` command ([#9984](https://github.com/vercel/vercel/pull/9984))
+
+### Patch Changes
+
+- [cli] Update `vc rollback` to use `lastRequestAlias` instead of `lastRollbackTarget` ([#10019](https://github.com/vercel/vercel/pull/10019))
+
+- Updated dependencies [[`c6c19354e`](https://github.com/vercel/vercel/commit/c6c19354e852cfc1338b223058c4b07fdc71c723), [`96b250213`](https://github.com/vercel/vercel/commit/96b2502133b36e060ce47ded9d7a74b70e63b8df), [`c7bcea408`](https://github.com/vercel/vercel/commit/c7bcea408131df2d65338e50ce319a6d8e4a8a82)]:
+  - @vercel/next@3.8.6
+  - @vercel/build-utils@6.7.4
+  - @vercel/node@2.14.4
+  - @vercel/remix-builder@1.8.11
+  - @vercel/static-build@1.3.33
+
 ## 30.0.0
 
 ### Major Changes
