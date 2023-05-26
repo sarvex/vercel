@@ -6,4 +6,4 @@ app = Flask(__name__)
 @app.route("/api")
 def index():
     random = os.environ['RANDOMNESS']
-    return random + ":env"
+    return f"{random}:env"

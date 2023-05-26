@@ -62,7 +62,7 @@ if 'handler' in __vc_variables or 'Handler' in __vc_variables:
         try:
             conn.request(method, path, headers=headers, body=request_body)
         except (http.client.HTTPException, socket.error) as ex:
-            print ("Request Error: %s" % ex)
+            print(f"Request Error: {ex}")
         res = conn.getresponse()
 
         return_dict = {
@@ -215,8 +215,7 @@ elif 'app' in __vc_variables:
                 """
                 Awaited by the application to receive messages in the queue.
                 """
-                message = await self.app_queue.get()
-                return message
+                return await self.app_queue.get()
 
             async def send(self, message):
                 """
@@ -302,8 +301,7 @@ elif 'app' in __vc_variables:
             }
 
             asgi_cycle = ASGICycle(scope)
-            response = asgi_cycle(__vc_module.app, body)
-            return response
+            return asgi_cycle(__vc_module.app, body)
 
 else:
     print('Missing variable `handler` or `app` in file "__VC_HANDLER_ENTRYPOINT".')
