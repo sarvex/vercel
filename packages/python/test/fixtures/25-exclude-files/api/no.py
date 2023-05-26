@@ -10,6 +10,6 @@ class handler(BaseHTTPRequestHandler):
         self.end_headers()
         first = path.exists('ignoreme/first.txt')
         second = path.exists('ignoreme/second.txt')
-        message = cow.Cowacter().milk(('%s:%s:RANDOMNESS_PLACEHOLDER') % (first, second))
+        message = cow.Cowacter().milk(f'{first}:{second}:RANDOMNESS_PLACEHOLDER')
         self.wfile.write(message.encode())
         return

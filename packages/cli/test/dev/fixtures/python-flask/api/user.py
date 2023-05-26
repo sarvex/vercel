@@ -5,4 +5,4 @@ app = Flask(__name__)
 @app.route('/<path:path>')
 def user(path):
     name = request.args.get('name')
-    return Response("Hello %s" % (name), mimetype='text/html')
+    return Response(f"Hello {name}", mimetype='text/html')

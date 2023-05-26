@@ -12,7 +12,7 @@ from pelican.settings import DEFAULT_CONFIG, get_settings_from_file
 
 SETTINGS_FILE_BASE = 'pelicanconf.py'
 SETTINGS = {}
-SETTINGS.update(DEFAULT_CONFIG)
+SETTINGS |= DEFAULT_CONFIG
 LOCAL_SETTINGS = get_settings_from_file(SETTINGS_FILE_BASE)
 SETTINGS.update(LOCAL_SETTINGS)
 
@@ -88,7 +88,7 @@ def livereload(c):
         server.watch(content_blob, lambda: build(c))
     # Watch the theme's templates and static assets
     theme_path = SETTINGS['THEME']
-    server.watch('{}/templates/*.html'.format(theme_path), lambda: build(c))
+    server.watch(f'{theme_path}/templates/*.html', lambda: build(c))
     static_file_extensions = ['.css', '.js']
     for extension in static_file_extensions:
         static_file = '{0}/static/**/*{1}'.format(theme_path, extension)

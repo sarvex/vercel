@@ -6,4 +6,4 @@ app = Flask(__name__)
 @app.route('/<path:path>')
 def date(path):
     d = datetime.now().isoformat()
-    return Response("Current date is %s" % (d), mimetype='text/html')
+    return Response(f"Current date is {d}", mimetype='text/html')
