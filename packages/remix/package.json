@@ -25,12 +25,12 @@
     "@vercel/nft": "0.22.5",
     "@vercel/static-config": "2.0.17",
     "path-to-regexp": "6.2.1",
-    "semver": "7.3.8",
+    "semver": "7.5.2",
     "ts-morph": "12.0.0"
   },
   "devDependencies": {
     "@types/jest": "27.5.1",
     "@types/node": "14.18.33",
-    "@types/semver": "7.3.13"
+    "@types/semver": "7.5.0"
   }
 }
